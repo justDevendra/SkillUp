@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,660,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
+  background: linear-gradient(
+    0deg,
+    #0b7fab -63.65%,
+    #33118b -12.75%,
+    #000032 34.95%
+  );
+}
+
+#head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+#head .logo {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  text-decoration: none;
+}
+
+#head ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#head ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+#head ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #320326, transparent);
+  z-index: 1000;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section img#moon,
+section img#stars {
+  mix-blend-mode: screen;
+}
+
+.mainText {
+  color: #fff;
+  font-size: clamp(1rem, 8vw, 4rem);
+  z-index: 10;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.mainText span {
+  font-weight: 800;
+}
+
+.btnEsplora {
+  background-color: #fff;
+  color: #33118b;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
+  z-index: 10;
+}
+
+#starts {
+  z-index: 1;
+}
+
+#fog {
+  z-index: 3;
+}
+
+#moon,
+#miniFog {
+  z-index: 5;
+}
+
+#cliffBack {
+  z-index: 7;
+}
+
+#cliff {
+  z-index: 9;
+}
+
+#landingContent {
+  z-index: 1000;
+}
+
+#content {
+  position: relative;
+  padding: 30px;
+  background-color: #320326;
+  padding: 30px 100px;
+  z-index: 1000;
+}
+
+#content h2 {
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  margin-bottom: 10px;
+  margin-top: 150px;
+}
+
+.fa-sort-down {
+  color: #000032;
+  margin-left: 5px;
+  transform: translateY(-10px);
+  animation: downArrowAnimation 1.5s infinite ease-in;
+}
+
+@keyframes downArrowAnimation {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #head,
+  #content {
+    padding: 30px 20px;
+  }
+  .btnEsplora {
+    padding: 7px 15px;
+  }
+  #content h2 {
+    margin-top: 100px;
+  }
+}
