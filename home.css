@@ -9,7 +9,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background: #fff;
   min-height: 100vh;
   background: linear-gradient(
@@ -25,7 +25,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 100px;
+  padding: 30px 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,6 +55,7 @@ body {
 }
 
 section {
+  overflow: hidden;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -102,7 +103,7 @@ section img#stars {
   font-weight: 800;
 }
 
-.btnEsplora {
+.btnExplore {
   background-color: #fff;
   color: #33118b;
   border: none;
@@ -110,7 +111,7 @@ section img#stars {
   text-decoration: none;
   padding: 10px 15px;
   display: inline-block;
-  font-size: clamp(0.5rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   z-index: 10;
 }
 
@@ -140,44 +141,153 @@ section img#stars {
 }
 
 #content {
-  position: relative;
-  padding: 30px;
   background-color: #320326;
-  padding: 30px 100px;
+  padding: 30px 250px;
   z-index: 1000;
 }
 
 #content h2 {
   font-size: clamp(1.5rem, 6vw, 3rem);
-  margin-bottom: 10px;
-  margin-top: 150px;
+  margin-bottom: 40px;
+  margin-top: 130px;
+  text-align: center;
 }
 
-.fa-sort-down {
-  color: #000032;
-  margin-left: 5px;
-  transform: translateY(-10px);
-  animation: downArrowAnimation 1.5s infinite ease-in;
+.effectTitle1 {
+  color: #3f9cff;
 }
 
-@keyframes downArrowAnimation {
-  from {
-    transform: translateY(-10px);
-  }
-  to {
-    transform: translateY(5px);
-  }
+.effectTitle2 {
+  color: #86ffff;
 }
 
-@media screen and (max-width: 600px) {
+.sect1 {
+  display: flex;
+}
+
+.sect1 p {
+  flex: 2;
+  text-align: justify;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding-right: 100px;
+}
+
+.sect1 div {
+  flex: 1;
+}
+
+.sect2 {
+  display: flex;
+  flex-flow: column-reverse;
+}
+
+.funcDiv {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.funcDiv div {
+  word-wrap: break-word;
+  width: 400px;
+  margin-left: 30px;
+}
+
+.funcDiv span {
+  display: flex;
+  justify-content: center;
+}
+
+.funcDiv:nth-child(2) {
+  justify-content: flex-end;
+}
+
+.funcDiv:first-child {
+  margin-bottom: 0;
+}
+
+.sect3 {
+  text-align: center;
+}
+
+.sect3 input {
+  border: none;
+  padding: 15px 40px;
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  border-radius: 10px;
+  background-color: #551e3e;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+.footer {
+  padding: 10px 250px;
+  width: 100%;
+  text-align: right;
+  background-color: #5b1731;
+  color: white;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.footer b {
+  text-decoration: underline;
+}
+
+@media (max-width: 1500px) {
   #head,
   #content {
     padding: 30px 20px;
   }
-  .btnEsplora {
-    padding: 7px 15px;
-  }
   #content h2 {
-    margin-top: 100px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sect1 {
+    display: block;
+  }
+  .funcDiv,
+  .funcDiv:nth-child(2) {
+    justify-content: center;
+  }
+  .sect1 p {
+    padding-right: 0;
+  }
+  .footer {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .funcDiv div {
+    width: 300px;
+  }
+}
+
+@media (max-width: 420px) {
+  .funcDiv div {
+    width: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  .funcDiv {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .funcDiv img {
+    width: 100px;
+  }
+  .funcDiv div {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #content {
+    padding: 5px;
   }
 }
