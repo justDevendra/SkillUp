@@ -108,6 +108,7 @@ const validateEmail = (email) => {
 //action changer function (login or sign up)
 let actionChanger = document.querySelector("#changeAct");
 let nameField = document.querySelector(".signUpName");
+let pageTitle = document.querySelector("title");
 
 actionChanger.addEventListener("click", () => {
   nameEntered.value = "";
@@ -120,11 +121,13 @@ actionChanger.addEventListener("click", () => {
   if (actionChanger.innerText === "Not signed up yet?") {
     actionType.innerText = "Sign up";
     actionBtn.value = "sign up";
+    pageTitle.innerText = "skill up | Sign up";
     actionChanger.innerText = "Already sign up?";
     nameField.style.display = "block";
   } else if (actionChanger.innerText === "Already sign up?") {
     actionType.innerText = "Login";
     actionBtn.value = "login";
+    pageTitle.innerText = "skill up | Login";
     actionChanger.innerText = "Not signed up yet?";
     nameField.style.display = "none";
   } else {
