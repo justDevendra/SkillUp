@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill up | App</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <img
+      class="vectShape"
+      src="./assets/img/vectShape1.svg"
+      alt="style vector shape 1"
+    />
+    <img
+      class="vectShape"
+      src="./assets/img/vectShape2.svg"
+      alt="style vector shape 2"
+    />
+    <img
+      class="vectShape"
+      src="./assets/img/vectShape3.svg"
+      alt="style vector shape 3"
+    />
+    <img
+      class="vectShape"
+      src="./assets/img/vectShape4.svg"
+      alt="style vector shape 4"
+    />
+    <div class="inactiveScreen"></div>
+    <div class="alert">
+      <div class="userProfile">
+        <div class="alertHead">
+          <div>User profile</div>
+          <span id="closeProfile"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="profileContent">
+          <div class="avatarDiv">
+            <img src="./assets/img/profileAvatars/girl1.svg" alt="" />
+            <div class="userName">Name</div>
+          </div>
+          <div class="profileDataDiv">
+            <div class="profileDataDiv1">
+              <p>Email:</p>
+              <p>Sex:</p>
+              <p>Num. Journeys:</p>
+              <p></p>
+            </div>
+            <div class="profileDataDiv2">
+              <p>data1</p>
+              <p>data2</p>
+              <p>data3</p>
+              <p class="logout" style="margin-top: 30px;text-align: right;"><a href="./index.html" >logout</a></p>
+            </div>
+            
+          </div>
+         
+          
+        </div>
+      </div>
+    </div>
+    <div class="alert">
+      <div class="addWindow">
+        <div class="alertHead">
+          <div>Add</div>
+          <span id="closeAdd"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="alertError"></div>
+        <div><label for="#country">Country</label></div>
+        <input type="text" id="#country" class="country" />
+        <div><label for="#journeyYear">Visited in year</label></div>
+        <input type="text" id="#journeyYear" class="journeyYear" />
+        <div><label>How was it?</label></div>
+        <div class="emojiContainer">
+          <span>
+            <img
+              data-index="0"
+              class="emojiSvg"
+              src="./assets/img/emojis/dead.svg"
+              alt="deadEmoji"
+            />
+          </span>
+          <span>
+            <img
+              data-index="1"
+              class="emojiSvg"
+              src="./assets/img/emojis/neutral.svg"
+              alt="neutralEmoji"
+            />
+          </span>
+          <span>
+            <img
+              data-index="2"
+              class="emojiSvg"
+              src="./assets/img/emojis/happy.svg"
+              alt="happyEmoji"
+            />
+          </span>
+        </div>
+        <div style="width: 100%; text-align: center">
+          <input id="btnAdd" type="button" value="Go!" />
+        </div>
+      </div>
+    </div>
+    <header id="head">
+      <span><i class="far fa-user-circle"></i></span>
+      <div>
+        <div class="logo">Memory Travels</div>
+      </div>
+    </header>
+    <section id="content">
+      <span class="tab" data-index="0">Add</span>
+      <span class="tab" data-index="1">Map</span>
+      <span class="tab" data-index="2">Suggestions</span>
+      <div id="tabContent">
+        <div class="tabContentContainer">
+          <div class="journeysAdded"></div>
+          <div class="journeyAdder"><i class="fas fa-plus-circle"></i></div>
+        </div>
+        <div class="tabContentContainer">
+          <div class="mapcontainer">
+            <div class="map"></div>
+          </div>
+          <div class="legend" >
+            <div class="mapIndicationContainer">
+            </div>
+          </div>
+        </div>
+        <div class="tabContentContainer">
+          <div>sugg here</div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/2916ffb6e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+            charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script src="./assets/lib/jQuery-Mapael-2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+    <script src="./assets/lib/jQuery-Mapael-2.2.0/js/maps/world_countries.js" charset="utf-8"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
