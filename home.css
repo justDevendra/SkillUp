@@ -12,6 +12,7 @@ body {
   overflow-x: hidden !important;
   background: #fff;
   min-height: 100vh;
+  min-width: 305px;
   background: linear-gradient(
     0deg,
     #0b7fab -63.65%,
@@ -20,11 +21,53 @@ body {
   );
 }
 
+.loginErrorContainer{
+  position: absolute;
+  top: 0;
+  height: 100vh !important;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 1000000;
+  flex-direction: column;
+  min-width: 305px;
+}
+
+.loginErrorContainer img{
+  width: 600px;
+  margin-bottom: 10px;
+}
+
+.loginErrorContainer h1{
+  margin-bottom: 10px;
+  color: #333333 !important;
+}
+
+.loginErrorContainer p{
+  margin-bottom: 30px;
+  color: #333333 !important;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.loginErrorContainer a{
+  margin-bottom: 10px;
+  color: #333333 !important;
+  padding: 8px 12px !important;
+  background-color: #4FD1D9;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff !important;
+}
+
 #head {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  min-width: 305px;
   padding: 30px 250px;
   display: flex;
   justify-content: space-between;
@@ -36,6 +79,10 @@ body {
   font-weight: 700;
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   text-decoration: none;
+}
+
+.logOut{
+  cursor: pointer;
 }
 
 #head ul {
@@ -205,29 +252,35 @@ section img#stars {
   width: 70px;
   bottom: -100px;
   left: 100px;
-  animation: arrow1 6.5s infinite linear;
+  animation: arrow1 8s infinite linear;
+  animation-delay: 4s;
+  opacity: 0;
 }
 
 .sect1 div div img:nth-child(2) {
   width: 40px;
   top: 180px;
   right: 140px;
-  animation: arrow2 8s infinite linear;
+  animation: arrow2 5s infinite linear;
+  opacity: 0;
 }
 
 .sect1 div div img:nth-child(3) {
   width: 30px;
   bottom: 130px;
   left: 50px;
-  animation: arrow3 8s infinite linear;
+  animation: arrow3 7s infinite linear;
   opacity: 0.4;
+  animation-delay: 1s;
+  opacity: 0;
 }
 
 .sect1 div div img:nth-child(4) {
   width: 40px;
   top: 80px;
   left: 150px;
-  animation: arrow4 7s infinite linear;
+  animation: arrow4 11s infinite linear;
+  opacity: 0;
 }
 
 .sect1 div div img:nth-child(5) {
@@ -235,6 +288,7 @@ section img#stars {
   bottom: 70px;
   right: 30px;
   animation: arrow5 5s infinite linear;
+
 }
 
 .sect1 div div img:nth-child(5) {
@@ -420,6 +474,10 @@ section img#stars {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
+.funcDiv p{
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
 .funcDiv div {
   word-wrap: break-word;
   width: 400px;
@@ -446,15 +504,57 @@ section img#stars {
 
 .sect3 button {
   border: none;
-  padding: 15px 40px;
+  padding: 15px 10px;
   text-align: center;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
   border-radius: 10px;
-  background-color: #551e3e;
-  color: #fff;
+  color: #320326;
   cursor: pointer;
-  margin-bottom: 100px !important;
   text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 100%;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+#userName{
+  text-transform: capitalize !important;
+}
+
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-end;
+}
+
+.product{
+  padding: 0px 10px;
+  background-color: #551e3e;
+  padding: 15px 20px;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  position: relative;
+
+}
+
+.products div div:nth-child(1){
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  font-weight: 600;
+  overflow-wrap: break-word;
+  padding: 2px 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.products div div:nth-child(2){
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-align: left;
+  border-top: .5px solid #fff;
+  margin-bottom: 30px;
+  padding-top: 20px;
 }
 
 .footer {
@@ -468,6 +568,20 @@ section img#stars {
 
 .footer b {
   text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000032;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
 }
 
 @media (max-width: 1500px) {

@@ -12,6 +12,86 @@ body {
   min-width: 280px;
 }
 
+.loginErrorContainer{
+  position: absolute;
+  top: 0;
+  height: 100vh !important;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 1000000;
+  flex-direction: column;
+  min-width: 305px;
+}
+
+.loginErrorContainer img{
+  width: 600px;
+  margin-bottom: 10px;
+}
+
+.loginErrorContainer h1{
+  margin-bottom: 10px;
+  color: #333333 !important;
+}
+
+.loginErrorContainer p{
+  margin-bottom: 30px;
+  color: #333333 !important;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.loginErrorContainer a{
+  margin-bottom: 10px;
+  color: #333333 !important;
+  padding: 8px 12px !important;
+  background-color: #4FD1D9;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff !important;
+}
+
+
+.lodingContainer{
+  position: absolute;
+  top: 0;
+  height: 100vh !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.lodingContainer h1{
+  color: #4a2c9b;
+  margin-bottom: 30px;
+}
+
+.lodingContainer img{
+  height: 60px;
+  color: #333333;
+}
+
+.lodingContainer img{
+  color: #333333;
+  transform: rotate(0deg);
+  animation: loding 1.2s linear infinite forwards;
+}
+
+@keyframes loding {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
 .inactiveScreen {
   position: absolute;
   width: 100%;
@@ -320,7 +400,7 @@ section #tabContent{
   border: 0.5 solid white;
 }
 
-.logout a{
+.logout a:nth-child(2){
   background-color: #ff7a7a;
   color: white;
   padding: 10px 15px;
@@ -328,6 +408,21 @@ section #tabContent{
   text-decoration: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.userName{
+  text-transform: capitalize;
+}
+
+.logout a:nth-child(1){
+  background-color: #545454;
+  color: white;
+  padding: 10px 15px;
+  text-align: right;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 .mapIndication p{

@@ -1,3 +1,18 @@
+let lodingContainer = document.querySelector(".lodingContainer")
+setInterval(() => {
+    lodingContainer.style.display = "none";
+}, 3000);
+
+let loginErrorContainer = document.querySelector(".loginErrorContainer");
+
+let loggedInUserStatus = localStorage.getItem("loggedInUser");
+
+if(loggedInUserStatus==undefined || loggedInUserStatus==-1){
+  loginErrorContainer.style.display = "flex";
+}else{
+  loginErrorContainer.style.display = "none";
+}
+
 let tabs = document.querySelectorAll(".tab");
 let tabsContent = document.querySelectorAll(".tabContentContainer");
 
@@ -431,3 +446,10 @@ for (let k = 0; k < Number(localStorage.getItem("legendNum" + loggedInUser)); k+
   
 }
 
+//log out system
+let logOutBtn = document.querySelector(".logout1");
+
+logOutBtn.addEventListener("click", () => {
+  localStorage.setItem("loggedInUser", -1);
+  logOutBtn.setAttribute("href", "./index.html");
+});
