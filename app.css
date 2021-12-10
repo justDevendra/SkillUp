@@ -305,7 +305,7 @@ section #tabContent{
   height: 90vh;
 }
 
-.tabContentContainer:nth-child(1) {
+.tabContentContainer:nth-child(1),.tabContentContainer:nth-child(3)  {
   overflow-y: auto;
   padding-bottom: 100px;
   padding: 10px 10px;
@@ -316,7 +316,7 @@ section #tabContent{
   border-bottom-left-radius: 5px;
   color: white;
 }
-.tabContentContainer:nth-child(1) div{
+.tabContentContainer:nth-child(1) div, .tabContentContainer:nth-child(3) div{
   box-sizing: border-box;
 }
 
@@ -328,7 +328,7 @@ section #tabContent{
   line-height: 200px;
   cursor: pointer;
   margin-top: 0px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .tabContentContainer:nth-child(2) {
@@ -545,6 +545,16 @@ section #tabContent{
   padding: 10px 0px;
 }
 
+#suggBtn{
+  padding: 10px 20px;
+  background-color: #fff;
+  color:#33118b;
+  font-size: clamp(1rem, 1.5vw, 1rem);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 150px;
+}
+
 @media (max-width: 600px) {
   #head {
     padding: 10px 5px;
@@ -556,7 +566,7 @@ section #tabContent{
     height: 150px;
     line-height: 150px;
   }
-  .tabContentContainer:nth-child(1).journeyAdded {
+  .tabContentContainer:nth-child(1).journeyAdded,.tabContentContainer:nth-child(3).journeyAdded {
     height: 150px;
   }
   .userProfile {
@@ -600,11 +610,11 @@ section #tabContent{
   .vectShape {
     display: none;
   }
-  .tabContentContainer:nth-child(1)::-webkit-scrollbar {
+  .tabContentContainer:nth-child(1)::-webkit-scrollbar, .tabContentContainer:nth-child(3).journeyAdded {
     display: none;
   }
 
-  .tabContentContainer:nth-child(1) {
+  .tabContentContainer:nth-child(1), .tabContentContainer:nth-child(3) {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
